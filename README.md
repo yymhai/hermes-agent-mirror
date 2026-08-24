@@ -79,7 +79,7 @@ A：因为 **GitHub Actions 是免费的**（public 仓库每月 2000 分钟额�
 A：fork 关系会和上游双向同步（pull request 等），不适合做单向镜像。中转仓是一个**独立的空仓**，只跑 Actions。
 
 ### Q：同步停了/失败怎么办？
-看 [Actions 页面](https://github.com/360PB/hermes-agent-mirror/actions)：
+看 [Actions 页面](https://github.com/yymhai/hermes-agent-mirror/actions)：
 - ✅ 绿色 = 同步正常
 - ❌ 红色 = 看 Run 日志，通常是 Secrets 过期或网络问题
 
@@ -87,7 +87,7 @@ A：fork 关系会和上游双向同步（pull request 等），不适合做单�
 A：技术上可以，但**不建议**——会破坏同步。改 workflow 等于改镜像规则。
 
 ### Q：怎么手动触发同步？
-进 [Actions 页面](https://github.com/360PB/hermes-agent-mirror/actions) → 选 **Sync Upstream to Gitee** → 右侧 **Run workflow**。
+进 [Actions 页面](https://github.com/yymhai/hermes-agent-mirror/actions) → 选 **Sync Upstream to Gitee** → 右侧 **Run workflow**。
 
 ---
 
@@ -105,8 +105,8 @@ A：技术上可以，但**不建议**——会破坏同步。改 workflow 等�
 | 类型 | 去处 |
 |------|------|
 | 上游项目问题 | https://github.com/NousResearch/hermes-agent/issues |
-| 镜像同步问题 | 本仓 [Issues](https://github.com/360PB/hermes-agent-mirror/issues) |
+| 镜像同步问题 | 本仓 [Issues](https://github.com/yymhai/hermes-agent-mirror/issues) |
 
 ---
 
-<sub>🤖 本 README 由 [git-mirror-sync](https://github.com/360PB/InfiniteTalk-mirror) skill 生成 · 最后更新：2026-08-24</sub>
+<sub>🤖 本 README 由 [git-mirror-sync](https://github.com/yymhai/InfiniteTalk-mirror) skill 生成 · 最后更新：2026-08-24</sub>
