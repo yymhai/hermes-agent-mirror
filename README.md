@@ -8,6 +8,18 @@
 
 ---
 
+## 🚀 国内用户一行安装
+
+国内直接装 Hermes Agent 经常卡在 uv / Playwright / Computer Use 下载上。这个脚本默认把仓库源、Python、npm、Node、Playwright、Computer Use 全走国内镜像，**零配置**：
+
+```powershell
+iex (irm https://raw.githubusercontent.com/yymhai/hermes-agent-mirror/main/install-hermes-cn.ps1)
+```
+
+详细说明见下方「[🚀 国内用户加速安装](#-国内用户加速安装)」段。
+
+---
+
 ## 📌 这是什么？
 
 这是一个**自动化中转仓库**，用途是把 [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) 的代码定时镜像到 Gitee，方便国内访问。
