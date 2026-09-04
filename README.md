@@ -91,6 +91,35 @@ A：技术上可以，但**不建议**——会破坏同步。改 workflow 等�
 
 ---
 
+---
+
+## 🚀 国内用户加速安装
+
+国内网络直接拉 GitHub 经常卡在 uv/Playwright/Computer Use 的二进制下载上。
+可以用 [install-hermes-cn.ps1](./install-hermes-cn.ps1) 一行装好：
+
+```powershell
+iex (irm https://raw.githubusercontent.com/yymhai/hermes-agent-mirror/main/install-hermes-cn.ps1)
+```
+
+它做的事（默认全开，零配置）：
+
+| 步骤 | 默认行为 |
+|------|---------|
+| 仓库源 | `gitee.com/qianchilang/hermes-agent`（已 patch install.ps1 的 GitHub URL）|
+| Python 包 | 清华 PyPI（`UV_INDEX_URL`）|
+| npm 包 | 淘宝镜像（`NPM_CONFIG_REGISTRY`）|
+| Node.js 二进制 | 淘宝镜像（脚本字符串替换）|
+| Playwright 浏览器 | 淘宝镜像（`PLAYWRIGHT_DOWNLOAD_HOST`）|
+| Computer Use（cua-driver） | 走 `gitee.com/qianchilang/cua`（GitHub → Gitee 同步已配）|
+
+可选参数（透传给官方 install.ps1）：
+
+- `-SkipComputerUse`：跳过 cua-driver
+- `-NoMirror`：关掉所有镜像加速，用官方源
+- `-InstallDir <path>` / `-HermesHome <path>`：自定义安装位置
+- `-SkipSetup`：装完不自动跑 hermes setup
+
 ## 🔐 安全说明
 
 - 本仓**不包含**任何明文 token
